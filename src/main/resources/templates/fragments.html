@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
-    <title>Fragments</title>
+    <link th:href="@{styles.css}" rel="stylesheet"/>
+    <title>Spa Time!!</title>
 </head>
 <body>
-<p th:fragment = "manicureDescription">Our manicure is a great way to spend 30 minutes of your day! We use shea butter hand cream and the finest gel polish.</p>
-<p th:fragment = "pedicureDescription">Relax for 45 minutes in pure luxury! Our massage chairs and experienced nail techs are here to get your feet in shape for sandal season!</p>
+<p th:fragment="manicureDescription">Our manicure is a great way to spend 30 minutes of your day! We use shea butter
+    hand cream and the finest gel polish.</p>
+<p th:fragment="pedicureDescription">Relax for 45 minutes in pure luxury! Our massage chairs and experienced nail techs
+    are here to get your feet in shape for sandal season!</p>
+
+
+<div th:fragment="footer">
+    <h3>Nail Polish Colors:</h3>
+    <div class="horizontal-list">
+        <div class="square-box" id="red">Red</div>
+        <div class="square-box" id="blue">Blue</div>
+        <div class="square-box" id="purple">Purple</div>
+        <div class="square-box" id="yellow">Yellow</div>
+        <div class="square-box" id="green">Green</div>
+        <div class="square-box" id="orange">Orange</div>
+    </div>
+</div>
 </body>
 </html>
